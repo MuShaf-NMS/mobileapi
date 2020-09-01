@@ -1,0 +1,7 @@
+pymysql
+flask
+flask-restful
+flask-cors
+passlib
+flask_jwt_extended
+uuid
