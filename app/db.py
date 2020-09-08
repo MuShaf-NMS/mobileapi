@@ -49,5 +49,6 @@ class Database:
             con.commit()
         except Exception as e:
             self.app.logger.info(e)
+            return {"msg": "failed"}
         finally:
             con.close()
