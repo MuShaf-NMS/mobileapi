@@ -30,8 +30,8 @@ class Login(Resource):
             if verifyPassword(data['password'], user['password']):
                 accessToken = create_access_token(identity=user['id'], expires_delta=timedelta(hours=6))
                 return {
-                    'id': user['id'],
-                    'username': data['username'],
+                    'username': user['username'],
+                    'nama': user['nama'],
                     'accessToken': accessToken,
                 }
 class Test(Resource):
