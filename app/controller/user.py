@@ -34,6 +34,10 @@ class Login(Resource):
                     'nama': user['nama'],
                     'accessToken': accessToken,
                 }
+            else:
+                return {'msg': 'salah'},403
+        else:
+            return {'msg': 'maaf'},403
 class Test(Resource):
     def get(self):
         return {"msg": "Welcome"}
