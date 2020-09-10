@@ -34,6 +34,9 @@ class Login(Resource):
                     'username': data['username'],
                     'accessToken': accessToken,
                 }
+class Test(Resource):
+    def get(self):
+        return {"msg": "Welcome"}
 
 class Logout(Resource):
     @jwt_required
